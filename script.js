@@ -12,12 +12,16 @@ const images = [
 
 let current = 0;
 const carousel = document.getElementById('carousel');
+
 function renderCarousel() {
     carousel.innerHTML = '';
     for (let i = 0; i < 4; i++) {
         const idx = (current + i) % images.length;
         const div = document.createElement('div');
-        div.className = "bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden";
+        div.className = "bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden cursor-pointer";
+        div.onclick = function() {
+            openModal(images[idx].title, images[idx].src.split('/').pop().split('.')[0]);
+        };
         const img = document.createElement('img');
         img.src = images[idx].src;
         img.alt = images[idx].title;
@@ -26,6 +30,7 @@ function renderCarousel() {
         carousel.appendChild(div);
     }
 }
+renderCarousel();
 document.getElementById('prevBtn').onclick = function() {
     current = (current - 1 + images.length) % images.length;
     renderCarousel();

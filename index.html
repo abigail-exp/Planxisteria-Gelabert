@@ -8,7 +8,7 @@
         <script src="script.js" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="m-plus-rounded-1c-regular">
         <header class="flex flex-row justify-between p-4 bg-black text-primaryText sticky w-full top-0 z-50 p-5">
             <div class="logoText text-3xl font-serif font-semibold ">
                 <p>Planxisteria Gelabert</p>
@@ -141,15 +141,36 @@
                 </div>
             </div>
 
-            <div class="section-contact">
-                
+            <div class="section-contact w-full  bg-[url('./assets/img/imagebg.png')] bg-cover bg-center min-h-96">
+                <div class="w-full h-full flex flex-col text-primaryText px-32 pt-10 bg-gray-900/75">
+                <div class="relative w-full py-8 pt-10 flex flex-row items-center gap-6">
+                    <div class="text fjalla-one-regular flex flex-col justify-center basis-2/3 text-2xl">
+                        <h1 class="fjalla-one-regular text-6xl ">Contacta'ns</h1>
+                        <p>On estem? Carrer de Gaspar Camps, 31, 08700, Igualada, Barcelona</p>
+                        <div class="flex flex-row gap-4 mt-4 items-center">
+                            <p>Telèfon: 938 03 21 98</p>
+                            <button class="bg-primaryText rounded-full text-black text-2xl py-3 px-5"> Contacta'ns</button>
+                        </div>
+                    </div>
+
+                    <div class="map basis-1/3 flex items-center justify-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.123456789012!2d1.6200000000000001!3d41.583333333333336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b5c6d7e8f9ab%3A0x1234567890abcdef!2sCarrer%20de%20Gaspar%20Camps%2C%2031%2C%2008700%20Igualada%2C%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sus!4v1616161616161" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+
+                </div>
+                <footer>
+                    <div class="text-center text-sm text-gray-500 mt-10">
+                        <p>&copy; 2023 Planxisteria Gelabert. All rights reserved.</p>
+                        <p>Developed by @Big_Lolo</p>
+                    </div>
+                </footer>
+                </div>
             </div>
 
             
         </main>
-        <footer>
-            <p>&copy; 2023 My Web Page</p>
-        </footer>
+        
 
         <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[0] hidden">
             <div class="bg-white p-5 rounded shadow-lg relative max-w-3xl w-full">
