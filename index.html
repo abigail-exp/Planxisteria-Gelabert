@@ -8,8 +8,8 @@
         <script src="script.js" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="m-plus-rounded-1c-regular">
-        <header class="flex flex-row justify-between p-4 bg-black text-primaryText sticky w-full top-0 z-50 p-5">
+    <body class="m-plus-rounded-1c-regular h-full">
+        <header class=" md:flex md:flex-row justify-between p-4 bg-black text-primaryText fixed md:sticky w-full top-0 z-50 p-5 h-auto">
             <div class="logoText text-3xl font-serif font-semibold ">
                 <p>Planxisteria Gelabert</p>
             </div>
@@ -23,36 +23,37 @@
             </div>
             
         </header>
-        <main class="min-h-screen flex flex-col bg-primaryBg w-full">
-            <div class="hero-section flex flex-col items-center justify-center h-screen text-primaryText ">
-                <div class="w-full basis-2/5 flex flex-row bg-black">
-                    <div class="img-container basis-2/5 items-center justify-center flex">
-                        <img src="./assets/img/logocar.png" alt="logo coche" class="w-2/3 h-auto">
+        <main class="flex flex-col bg-primaryBg w-full pt-24 md:pt-0">
+            <div class="hero-section flex flex-col items-center justify-center text-primaryText ">
+                
+                <div class="w-full flex flex-col md:flex-row bg-black ">
+                    <div class="basis-2/5 items-center justify-center flex">
+                        <img src="./assets/img/logocar.png" alt="logo coche" class="w-5/12 md:w-2/3 h-auto">
                     </div>
-                    <div class="title-container basis-3/5 flex flex-col items-center justify-center text-8xl permanent-marker-regular">
+                    <div class="title-container basis-3/5 flex flex-col items-center justify-center text-4xl md:text-8xl permanent-marker-regular">
                         <h1 class="font-bold">Planxisteria</h1>
                         <h1 class="font-bold pl-44 pt-5">Gelabert</h1>
                     </div>
                 </div>
-                <div class="basis-4/5 w-full p-5 items-center  flex flex-col wave-container">
+                <div class="w-full p-5 items-center h-auto flex flex-col wave-container">
                     
-                    <div class="flex flex-row justify-between items-center w-4/5 mt-16">
-                        <div class="w-96 h-96 flex items-center justify-center mr-4 flex-col text-center">
-                            <img src="./assets/img/img1.png" alt="icono 1" class="h-3/5">
+                    <div class="flex flex-col md:flex-row justify-between items-center w-4/5 mt-16">
+                        <div class="w-full md:w-56 md:h-56 md:w-96 md:h-96 flex items-center justify-center mr-4 flex-col text-center mb-20 md:mb-0">
+                            <img src="./assets/img/img1.png" alt="icono 1" class="w-3/5 h-auto md:w-auto md:h-3/5">
                             <p class="text-2xl font-bold text-black">Precisió</p>
                             <p class="">Detall perfecte des del primer pas.</p>
                             <p>Perque fins el més petit importa.</p>
                         </div>
 
-                        <div class="w-96 h-96 flex items-center justify-center mr-4 flex-col text-center">
-                            <img src="./assets/img/img2.png" alt="icono 1" class="h-3/5">
+                        <div class="w-full md:w-56 h-56 md:w-96 flex items-center justify-center mr-4 flex-col text-center mb-20 md:mb-">
+                            <img src="./assets/img/img2.png" alt="icono 1" class="w-3/5 h-auto md:w-auto md:h-3/5">
                             <p class="text-2xl font-bold text-black">Innovació</p>
                             <p class="">Tècniques avançades, resultats revolucionaris.</p>
                             <p>No només pintem, transformem.</p>
                         </div>
 
-                        <div class="w-96 h-96 flex items-center justify-center mr-4 flex-col text-center">
-                            <img src="./assets/img/img3.png" alt="icono 1" class="h-3/5">
+                        <div class="w-full w-56 md:h-56 md:w-96 flex items-center justify-center mr-4 flex-col text-center mb-20 md:mb-">
+                            <img src="./assets/img/img3.png" alt="icono 1" class="w-3/5 h-auto md:w-auto md:h-3/5">
                             <p class="text-2xl font-bold text-black">Excel·lència</p>
                             <p class="">Qualitat que es veu.</p>
                             <p>L'acabat que et mereixes.</p>
@@ -61,91 +62,86 @@
                 </div>
             </div>
             
-            <div class="section-info bg-black h-1/3 w-full flex flex-col text-primaryText px-32 pt-10">
+            <div class="section-info bg-black h-1/3 w-full flex flex-col text-primaryText px-8 md:px-32 pt-10">
                 <h2 class="text-5xl font-bold">Què oferim?</h2>
 
-                <div class="flex flex-row gap-4 justify-center items-center w-full py-8 pt-10">
-                    <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden ">
-                        <div class="flex-1 flex pt-3 pl-7">
-                            <img src="./assets/icons/icon1.png" alt="Servei 1" class="w-4/12 object-contain">
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center w-full py-8 pt-10">
+                    <div class="flex flex-col md:flex-row gap-6 w-full py-8 pt-10">
+                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
+                            <div class="flex-1 flex pt-3 pl-7">
+                                <img src="./assets/icons/icon1.png" alt="Servei 1" class="w-4/12 object-contain">
+                            </div>
+                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
+                                <h3 class="font-bold text-lg text-black">Reparació</h3>
+                                <p class="text-black">De cops a óxid: resolem qualsevol dany amb rapidesa i tecnologia d'ultima generació.</p>
+                                <p class="text-black">Seguretat i presició sempre.</p>
+                            </div>
                         </div>
-                        <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                            <h3 class="font-bold text-lg text-black">Reparació</h3>
-                            <p class="text-black">De cops a óxid: resolem qualsevol dany amb rapidesa i tecnologia d'ultima generació.</p>
-                            <p class="text-black">Seguretat i presició sempre.</p>
+                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
+                            <div class="flex-1 flex pt-3 pl-7">
+                                <img src="./assets/icons/icon2.png" alt="Servei 2" class="w-3/12 object-contain">
+                            </div>
+                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
+                                <h3 class="font-bold text-lg text-black">Restauració</h3>
+                                <p class="text-black">Vols restaurar algu obra classica? T'ajudem a donar-li a la teva obra l'aspecte que tenia.</p>
+                                <p class="text-black">Com sortit de fàbrica.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
+                            <div class="flex-1 flex pt-3 pl-7">
+                                <img src="./assets/icons/icon3.png" alt="Servei 3" class="w-3/12 object-contain">
+                            </div>
+                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
+                                <h3 class="font-bold text-lg text-black">Renovació</h3>
+                                <p class="text-black">Canvis de color</p>
+                                <p class="text-black">Rejuvenim la teva xapa amb un acabat impecable amb la nostra pintura amb base d'aigua.</p>
+                                <p class="text-black">El teu vehicle, com nou.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
+                            <div class="flex-1 flex pl-7 pt-3">
+                                <img src="./assets/icons/icon4.png" alt="Servei 4" class="w-3/12 object-contain">
+                            </div>
+                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
+                                <h3 class="font-bold text-lg text-black">Solucions a Mida</h3>
+                                <p class="text-black">No hi ha projecte massa complex.</p>
+                                <p class="text-black">Consulta'ns per serveis especials.</p>
+                                <p class="text-black">Ho fem possible.</p>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden ">
-                        <div class="flex-1 flex pt-3 pl-7">
-                            <img src="./assets/icons/icon2.png" alt="Servei 1" class="w-3/12 object-contain">
-                        </div>
-                        <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                            <h3 class="font-bold text-lg text-black">Restauració</h3>
-                            <p class="text-black">Vols restaurar algu obra classica? T'ajudem a donar-li a la teva obra l'aspecte que tenia.</p>
-                            <p class="text-black">Com sortit de fàbrica.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden ">
-                        <div class="flex-1 flex pt-3 pl-7">
-                            <img src="./assets/icons/icon3.png" alt="Servei 1" class="w-3/12 object-contain">
-                        </div>
-                        <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                            <h3 class="font-bold text-lg text-black">Renovació</h3>
-                            <p class="text-black">Canvis de color</p>
-                            <p class="text-black">Rejuvenim la teva xapa amb un acabat impecable amb la nostra pintura amb base d'aigua.</p>
-
-                            <p class="text-black">El teu vehicle, com nou.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden ">
-                        <div class="flex-1 flex pl-7 pt-3">
-                            <img src="./assets/icons/icon4.png" alt="Servei 1" class="w-3/12 object-contain">
-                        </div>
-                        <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                            <h3 class="font-bold text-lg text-black">Solucions a Mida</h3>
-                            <p class="text-black">No hi ha projecte massa complex.</p>
-                            <p class="text-black">Consulta'ns per serveis especials.</p>
-                            <p class="text-black">Ho fem possible.</p>
-                        </div>
-                    </div>
                 </div>
 
             </div>
-            
-            <div class="section-history">
 
-            </div>
-
-            <div class="section-galeria bg-white w-full flex flex-col text-primaryText px-32 pt-10">
-                <h2 class="text-5xl font-bold">Galeria</h2>
-                <div class="relative w-full py-8 pt-10 flex flex-row items-center gap-6">
-                    <button id="prevBtn" class=" bg-black text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800">&lt;</button>
-                    <div id="carousel" class="flex flex-row gap-4 justify-center items-center w-full transition-all duration-500">
-                        <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden cursor-pointer" onclick="openModal('Restauració moto', 'galeria1')">
+            <div class="section-galeria bg-white w-full flex flex-col text-primaryText px-4 md:px-32 pt-10">
+                <h2 class="text-4xl md:text-5xl font-bold">Galeria</h2>
+                <div class="relative w-full py-8 pt-10 flex flex-col md:flex-row items-center gap-6">
+                    <button id="prevBtn" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800 mb-4 md:mb-0 md:mr-2">&lt;</button>
+                    <div id="carousel" class="flex flex-row md:gap-4 gap-2 justify-center items-center w-full transition-all duration-500 overflow-x-auto md:overflow-x-visible scrollbar-hide">
+                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Restauració moto', 'galeria1')">
                             <img src="./assets/img/galeria1.png" alt="Galeria 1" class="w-full h-full object-cover">
                         </div>
-                        <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden cursor-pointer" onclick="openModal('Restauració fiat','galeria2')">
+                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Restauració fiat','galeria2')">
                             <img src="./assets/img/galeria2.png" alt="galeria2" class="w-full h-full object-cover">
                         </div>
-                        <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden cursor-pointer" onclick="openModal('Nou aspecte kawasaki', 'galeria3')">
+                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Nou aspecte kawasaki', 'galeria3')">
                             <img src="./assets/img/galeria3.png" alt="galeria2" class="w-full h-full object-cover">
                         </div>
-                        <div class="bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden cursor-pointer" onclick="openModal('Restauració ', 'galeria4')">
+                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Restauració ', 'galeria4')">
                             <img src="./assets/img/galeria4.png" alt="Galeria 4" class="w-full h-full object-cover">
                         </div>
                     </div>
-                    <button id="nextBtn" class="  bg-black text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800">&gt;</button>
+                    <button id="nextBtn" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800 mt-4 md:mt-0 md:ml-2">&gt;</button>
                 </div>
             </div>
 
             <div class="section-contact w-full  bg-[url('./assets/img/imagebg.png')] bg-cover bg-center min-h-96">
-                <div class="w-full h-full flex flex-col text-primaryText px-32 pt-10 bg-gray-900/75">
-                <div class="relative w-full py-8 pt-10 flex flex-row items-center gap-6">
+                <div class="w-full h-full flex flex-col text-primaryText px-8 md:px-32 pt-10 bg-gray-900/75">
+                <div class="relative w-full py-8 pt-10 flex flex-col md:flex-row md:items-center gap-6">
                     <div class="text fjalla-one-regular flex flex-col justify-center basis-2/3 text-2xl">
-                        <h1 class="fjalla-one-regular text-6xl ">Contacta'ns</h1>
+                        <h1 class="fjalla-one-regular text-4xl md:text-6xl " href="mailto:pgelabertsl@gmail.com">Contacta'ns</h1>
                         <p>On estem? Carrer de Gaspar Camps, 31, 08700, Igualada, Barcelona</p>
                         <div class="flex flex-row gap-4 mt-4 items-center">
                             <p>Telèfon: 938 03 21 98</p>
@@ -155,13 +151,12 @@
 
                     <div class="map basis-1/3 flex items-center justify-center">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.123456789012!2d1.6200000000000001!3d41.583333333333336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b5c6d7e8f9ab%3A0x1234567890abcdef!2sCarrer%20de%20Gaspar%20Camps%2C%2031%2C%2008700%20Igualada%2C%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sus!4v1616161616161" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
                     </div>
 
                 </div>
                 <footer>
                     <div class="text-center text-sm text-gray-500 mt-10">
-                        <p>&copy; 2023 Planxisteria Gelabert. All rights reserved.</p>
+                        <p>&copy; 2025 Planxisteria Gelabert. All rights reserved.</p>
                         <p>Developed by @Big_Lolo</p>
                     </div>
                 </footer>
