@@ -1,212 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Web Page</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body class="m-plus-rounded-1c-regular h-full">
-        <header class=" md:flex md:flex-row justify-between p-4 bg-black text-primaryText fixed md:sticky w-full top-0 z-50 p-5 h-auto">
-            <div class="logoText text-3xl font-serif font-semibold ">
-                <p>Planxisteria Gelabert</p>
-            </div>
+<html lang="ca">
 
-            <div class="nav text-xl">
-                <ul class="flex space-x-4">
-                    <li>
-                        <a href="https://www.instagram.com/planxisgelabert/" target="_blank" aria-label="Instagram" class="hover:text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:pgelabertsl@gmail.com" aria-label="Email" class="hover:text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+34938032198" aria-label="Telèfon" class="hover:text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path d="M22 16.92v3a2 2 0 01-2.18 2A19.72 19.72 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13 1.05.37 2.07.72 3.05a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.98.35 2 .59 3.05.72A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Planxisteria Gelabert - Experts en reparació, restauració i renovació de vehicles a Igualada. Més de 40 anys d'experiència en carrosseria.">
+    <title>Planxisteria Gelabert | Experts en Carrosseria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./assets/img/logocar.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-content">
+            <a href="#" class="logo-text">Planxisteria Gelabert</a>
+            <div class="nav-socials">
+                <a href="https://www.instagram.com/planxisgelabert/" target="_blank" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="mailto:pgelabertsl@gmail.com" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="tel:+34938032198" aria-label="Telèfon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                </a>
             </div>
-            
-        </header>
-        <main class="flex flex-col bg-primaryBg w-full pt-24 md:pt-0">
-            <div class="hero-section flex flex-col items-center justify-center text-primaryText ">
-                
-                <div class="w-full flex flex-col md:flex-row bg-black ">
-                    <div class="basis-2/5 items-center justify-center flex">
-                        <img src="./assets/img/logocar.png" alt="logo coche" class="w-5/12 md:w-2/3 h-auto">
-                    </div>
-                    <div class="title-container basis-3/5 flex flex-col items-center justify-center text-4xl md:text-8xl permanent-marker-regular">
-                        <h1 class="font-bold">Planxisteria</h1>
-                        <h1 class="font-bold pl-44 pt-5">Gelabert</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="section-tag reveal">Trajectòria i Passió</span>
+                    <h1 class="reveal">Planxisteria <span>Gelabert</span></h1>
+                    <p class="reveal">Més de quatre dècades dedicades a la perfecció en la xapa i pintura. Devolució del
+                        caràcter i la seguretat al teu vehicle.</p>
+                    <div class="reveal">
+                        <a href="#contact" class="btn btn-primary">Contacta amb nosaltres</a>
                     </div>
                 </div>
-                <div class="w-full p-5 items-center h-auto flex flex-col wave-container">
-                    
-                    <div class="flex flex-col md:flex-row justify-between items-center w-4/5 mt-16">
-                        <div class="w-full md:w-56 md:h-56 md:w-96 md:h-96 flex items-center justify-center mr-4 flex-col text-center mb-20 md:mb-0">
-                            <img src="./assets/img/img1.png" alt="icono 1" class="w-3/5 h-auto md:w-auto md:h-3/5">
-                            <p class="text-2xl font-bold text-black">Precisió</p>
-                            <p class="">Detall perfecte des del primer pas.</p>
-                            <p>Perque fins el més petit importa.</p>
-                        </div>
+                <div class="hero-img reveal">
+                    <img src="./assets/img/logocar.png" alt="Planxisteria Gelabert Logo">
+                </div>
+            </div>
+        </section>
 
-                        <div class="w-full md:w-56 h-56 md:w-96 flex items-center justify-center mr-4 flex-col text-center mb-20 md:mb-">
-                            <img src="./assets/img/img2.png" alt="icono 1" class="w-3/5 h-auto md:w-auto md:h-3/5">
-                            <p class="text-2xl font-bold text-black">Innovació</p>
-                            <p class="">Tècniques avançades, resultats revolucionaris.</p>
-                            <p>No només pintem, transformem.</p>
-                        </div>
+        <!-- Values Section -->
+        <section class="section-padding bg-bg" id="values">
+            <div class="container">
+                <span class="section-tag reveal">Valors</span>
+                <h2 class="section-title reveal">L'art de la precisió</h2>
+                <div class="section-desc reveal">Ens enfoquem en els detalls que ningú més veu, però que marquen tota la
+                    diferència.</div>
 
-                        <div class="w-full w-56 md:h-56 md:w-96 flex items-center justify-center mr-4 flex-col text-center mb-20 md:mb-">
-                            <img src="./assets/img/img3.png" alt="icono 1" class="w-3/5 h-auto md:w-auto md:h-3/5">
-                            <p class="text-2xl font-bold text-black">Excel·lència</p>
-                            <p class="">Qualitat que es veu.</p>
-                            <p>L'acabat que et mereixes.</p>
+                <div class="features-grid">
+                    <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                        <div class="feature-icon">
+                            <img src="./assets/img/img1.png" alt="Precisió">
+                        </div>
+                        <h3>Precisió</h3>
+                        <p>Detall perfecte des del primer pas. Perque fins el més petit importa en el resultat final.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                        <div class="feature-icon">
+                            <img src="./assets/img/img2.png" alt="Innovació">
+                        </div>
+                        <h3>Innovació</h3>
+                        <p>Tècniques avançades i resultats revolucionaris. No només pintem, transformem cada peça.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                        <div class="feature-icon">
+                            <img src="./assets/img/img3.png" alt="Excel·lència">
+                        </div>
+                        <h3>Excel·lència</h3>
+                        <p>Qualitat que es veu a simple vista. L'acabat premium que el teu vehicle es mereix.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-padding" id="services">
+            <div class="container anim-stagger">
+                <span class="section-tag reveal text-center">Serveis</span>
+                <h2 class="section-title reveal text-center">Què oferim?</h2>
+
+                <div class="services-container mt-10">
+                    <div class="service-row reveal">
+                        <div class="service-icon-box">
+                            <img src="./assets/icons/icon1.png" alt="Reparació">
+                        </div>
+                        <div class="service-info">
+                            <h3>Reparació</h3>
+                            <p>De cops a òxid: resolem qualsevol dany amb rapidesa i tecnologia d'última generació.
+                                Seguretat i precisió garantides.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-row reveal">
+                        <div class="service-icon-box">
+                            <img src="./assets/icons/icon2.png" alt="Restauració">
+                        </div>
+                        <div class="service-info">
+                            <h3>Restauració</h3>
+                            <p>Vols restaurar una obra clàssica? T'ajudem a donar-li el seu aspecte original. Com si
+                                acabés de sortir de fàbrica.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-row reveal">
+                        <div class="service-icon-box">
+                            <img src="./assets/icons/icon3.png" alt="Renovació">
+                        </div>
+                        <div class="service-info">
+                            <h3>Renovació</h3>
+                            <p>Canvis de color i pintura amb base d'aigua. Rejuvenim la teva xapa amb un acabat
+                                impecable i durador.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-row reveal">
+                        <div class="service-icon-box">
+                            <img src="./assets/icons/icon4.png" alt="Solucions">
+                        </div>
+                        <div class="service-info">
+                            <h3>Solucions a Mida</h3>
+                            <p>No hi ha projecte massa complex. Consulta'ns per serveis especials i personalitzacions.
+                                Ho fem possible.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="section-info bg-black h-1/3 w-full flex flex-col text-primaryText px-8 md:px-32 pt-10">
-                <h2 class="text-5xl font-bold">Què oferim?</h2>
+        </section>
 
-                <div class="flex flex-col md:flex-row gap-4 justify-center items-center w-full py-8 pt-10">
-                    <div class="flex flex-col md:flex-row gap-6 w-full py-8 pt-10">
-                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
-                            <div class="flex-1 flex pt-3 pl-7">
-                                <img src="./assets/icons/icon1.png" alt="Servei 1" class="w-4/12 object-contain">
-                            </div>
-                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                                <h3 class="font-bold text-lg text-black">Reparació</h3>
-                                <p class="text-black">De cops a óxid: resolem qualsevol dany amb rapidesa i tecnologia d'ultima generació.</p>
-                                <p class="text-black">Seguretat i presició sempre.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
-                            <div class="flex-1 flex pt-3 pl-7">
-                                <img src="./assets/icons/icon2.png" alt="Servei 2" class="w-3/12 object-contain">
-                            </div>
-                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                                <h3 class="font-bold text-lg text-black">Restauració</h3>
-                                <p class="text-black">Vols restaurar algu obra classica? T'ajudem a donar-li a la teva obra l'aspecte que tenia.</p>
-                                <p class="text-black">Com sortit de fàbrica.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
-                            <div class="flex-1 flex pt-3 pl-7">
-                                <img src="./assets/icons/icon3.png" alt="Servei 3" class="w-3/12 object-contain">
-                            </div>
-                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                                <h3 class="font-bold text-lg text-black">Renovació</h3>
-                                <p class="text-black">Canvis de color</p>
-                                <p class="text-black">Rejuvenim la teva xapa amb un acabat impecable amb la nostra pintura amb base d'aigua.</p>
-                                <p class="text-black">El teu vehicle, com nou.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white flex flex-col h-64 rounded shadow-lg overflow-hidden md:w-1/4 w-full">
-                            <div class="flex-1 flex pl-7 pt-3">
-                                <img src="./assets/icons/icon4.png" alt="Servei 4" class="w-3/12 object-contain">
-                            </div>
-                            <div class="flex-1 flex flex-col items-left p-2 pl-7">
-                                <h3 class="font-bold text-lg text-black">Solucions a Mida</h3>
-                                <p class="text-black">No hi ha projecte massa complex.</p>
-                                <p class="text-black">Consulta'ns per serveis especials.</p>
-                                <p class="text-black">Ho fem possible.</p>
-                            </div>
-                        </div>
+        <!-- Gallery Section -->
+        <section class="section-padding" id="gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <div>
+                        <span class="section-tag reveal">Galeria</span>
+                        <h2 class="section-title reveal">Projectes Destacats</h2>
                     </div>
-                    
                 </div>
 
-            </div>
-
-            <div class="section-galeria bg-white w-full flex flex-col text-primaryText px-4 md:px-32 pt-10">
-                <h2 class="text-4xl md:text-5xl font-bold">Galeria</h2>
-                <div class="relative w-full py-8 pt-10 flex flex-col md:flex-row items-center gap-6">
-                    <button id="prevBtn" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800 mb-4 md:mb-0 md:mr-2">&lt;</button>
-                    <div id="carousel" class="flex flex-row md:gap-4 gap-2 justify-center items-center w-full transition-all duration-500 overflow-x-auto md:overflow-x-visible scrollbar-hide">
-                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Restauració moto', 'galeria1')">
-                            <img src="./assets/img/galeria1.png" alt="Galeria 1" class="w-full h-full object-cover">
-                        </div>
-                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Restauració fiat','galeria2')">
-                            <img src="./assets/img/galeria2.png" alt="galeria2" class="w-full h-full object-cover">
-                        </div>
-                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Nou aspecte kawasaki', 'galeria3')">
-                            <img src="./assets/img/galeria3.png" alt="galeria2" class="w-full h-full object-cover">
-                        </div>
-                        <div class="bg-white flex flex-col min-w-[70vw] md:w-1/4 h-48 md:h-64 rounded shadow-lg overflow-hidden cursor-pointer mx-1 md:mx-0" onclick="openModal('Restauració ', 'galeria4')">
-                            <img src="./assets/img/galeria4.png" alt="Galeria 4" class="w-full h-full object-cover">
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal" onclick="openModal('Restauració Moto', 'galeria1')">
+                        <img src="./assets/img/galeria1.png" alt="Restauració Moto">
+                        <div class="gallery-overlay">
+                            <h3>Restauració Moto</h3>
                         </div>
                     </div>
-                    <button id="nextBtn" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800 mt-4 md:mt-0 md:ml-2">&gt;</button>
+                    <div class="gallery-item reveal" onclick="openModal('Restauració Fiat', 'galeria2')">
+                        <img src="./assets/img/galeria2.png" alt="Restauració Fiat">
+                        <div class="gallery-overlay">
+                            <h3>Restauració Fiat</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" onclick="openModal('Passió Kawasaki', 'galeria3')">
+                        <img src="./assets/img/galeria3.png" alt="Nou aspecte Kawasaki">
+                        <div class="gallery-overlay">
+                            <h3>Passió Kawasaki</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" onclick="openModal('Restauració Clàssic', 'galeria4')">
+                        <img src="./assets/img/galeria4.png" alt="Restauració Clàssic">
+                        <div class="gallery-overlay">
+                            <h3>Restauració Clàssic</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" onclick="openModal('Detall de Motor', 'galeria5')">
+                        <img src="./assets/img/galeria5.png" alt="Detall de Motor">
+                        <div class="gallery-overlay">
+                            <h3>Detall de Motor</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" onclick="openModal('Pintura Premium', 'galeria6')">
+                        <img src="./assets/img/galeria6.png" alt="Pintura Premium">
+                        <div class="gallery-overlay">
+                            <h3>Pintura Premium</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" onclick="openModal('Xapa i Acabats', 'galeria7')">
+                        <img src="./assets/img/galeria7.png" alt="Xapa i Acabats">
+                        <div class="gallery-overlay">
+                            <h3>Xapa i Acabats</h3>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" onclick="openModal('Renovació Total', 'galeria8')">
+                        <img src="./assets/img/galeria8.png" alt="Renovació Total">
+                        <div class="gallery-overlay">
+                            <h3>Renovació Total</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="section-contact w-full  bg-[url('./assets/img/imagebg.png')] bg-cover bg-center min-h-96">
-                <div class="w-full h-full flex flex-col text-primaryText px-8 md:px-32 pt-10 bg-gray-900/75">
-                <div class="relative w-full py-8 pt-10 flex flex-col md:flex-row md:items-center gap-6">
-                    <div class="text fjalla-one-regular flex flex-col justify-center basis-2/3 text-2xl">
-                        <h1 class="fjalla-one-regular text-4xl md:text-6xl " href="mailto:pgelabertsl@gmail.com">Contacta'ns</h1>
-                        <p>On estem? Carrer de Gaspar Camps, 31, 08700, Igualada, Barcelona</p>
-                        <div class="flex flex-row gap-4 mt-4 items-center">
-                            <a href="tel:+34938032198" class="text-primaryText text-2xl">Telèfon: 938 03 21 98</a>
-                            <a href="mailto:pgelabertsl@gmail.com" class="bg-primaryText rounded-full text-black text-2xl py-3 px-5">
-                            <button type="button">Contacta'ns</button>
-                        </a>  
+        <!-- Contact Section -->
+        <section class="section-padding" id="contact">
+            <div class="container">
+                <div class="contact-grid reveal">
+                    <div class="contact-info">
+                        <span class="section-tag">Contacte</span>
+                        <h2>Parlem?</h2>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h4>On estem?</h4>
+                                <p>Carrer de Gaspar Camps, 31<br>08700 Igualada, Barcelona</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Telèfon</h4>
+                                <a href="tel:+34938032198">938 03 21 98</a>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <a href="mailto:pgelabertsl@gmail.com">pgelabertsl@gmail.com</a>
+                            </div>
                         </div>
+
+                        <a href="mailto:pgelabertsl@gmail.com" class="btn btn-primary">Envia un missatge</a>
                     </div>
 
-                    <div class="map basis-1/3 flex items-center justify-center">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.123456789012!2d1.6200000000000001!3d41.583333333333336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b5c6d7e8f9ab%3A0x1234567890abcdef!2sCarrer%20de%20Gaspar%20Camps%2C%2031%2C%2008700%20Igualada%2C%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sus!4v1616161616161" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11953.5358051759!2d1.61111!3d41.5815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4437a353683ab%3A0x7e8f504e90835f1!2sCarrer%20de%20Gaspar%20Camps%2C%2031%2C%2008700%20Igualada%2C%20Barcelona!5e0!3m2!1sca!2ses!4v1710000000000!5m2!1sca!2ses"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-
-                </div>
-                <footer>
-                    <div class="text-center text-sm text-gray-500 mt-10">
-                        <p>&copy; 2025 Planxisteria Gelabert. All rights reserved.</p>
-                        <p>Developed by @Big_Lolo</p>
-                    </div>
-                </footer>
                 </div>
             </div>
+        </section>
+    </main>
 
-            
-        </main>
-        
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Planxisteria Gelabert. Tots els drets reservats.</p>
+        </div>
+    </footer>
 
-        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[0] hidden">
-            <div class="bg-white p-5 rounded shadow-lg relative max-w-3xl w-full">
-                <span class="absolute top-2 right-2 cursor-pointer text-3xl" onclick="closeModal()">&times;</span>
-                <h1 class="text-5xl font-bold mb-4 text-left" id="modalTitle"></h1>
-                <div class="content my-10 flex flex-row permanent-marker-regular">
-                    <div class="beforeImg flex flex-col gap-2 items-center ">
-                        <img id="beforeImg" src="" alt="Imatge abans" class="w-7/12 h-auto">
-                        <p class="text-5xl ">Abans</p>
-                    </div>
-                    <div class="afterImg flex flex-col gap-2 items-center justify-center permanent-marker-regular">
-                        <img id="afterImg" src="" alt="Imatge Despres" class="w-7/12 h-auto">
-                        <p class="text-5xl ">Després</p>
-                    </div>
+    <!-- BEFORE/AFTER MODAL -->
+    <div id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" class="section-title text-center" style="margin-bottom: 2rem;">Projecte</h2>
+            <div class="comparison-container">
+                <div class="comparison-box">
+                    <img id="beforeImg" src="" alt="Abans">
+                    <span>Abans</span>
+                </div>
+                <div class="comparison-box">
+                    <img id="afterImg" src="" alt="Després">
+                    <span>Després</span>
                 </div>
             </div>
         </div>
-    </body>
-    <script src="script.js" defer></script>
-    <script src="tailwind.config.js"></script>                        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>

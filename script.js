@@ -1,63 +1,72 @@
-//Codi carrussel (Eliminat el automoviment, per tornar-ho a ficar, només ficar un setInterval)
-const images = [
-    {title: "Galeria1", src: "./assets/img/galeria1.png"},
-    {title: "Galeria2", src: "./assets/img/galeria2.png"},
-    {title: "Galeria3", src: "./assets/img/galeria3.png"},
-    {title: "Galeria4", src: "./assets/img/galeria4.png"},
-    {title: "Galeria5", src: "./assets/img/galeria5.png"},
-    {title: "Galeria6", src: "./assets/img/galeria6.png"},
-    {title: "Galeria7", src: "./assets/img/galeria7.png"},
-    {title: "Galeria8", src: "./assets/img/galeria8.png"}
-];
+/**
+ * Planxisteria Gelabert - Script
+ * Redesigned for Premium Experience
+ */
 
-let current = 0;
-const carousel = document.getElementById('carousel');
+document.addEventListener('DOMContentLoaded', () => {
 
-function renderCarousel() {
-    carousel.innerHTML = '';
-    for (let i = 0; i < 4; i++) {
-        const idx = (current + i) % images.length;
-        const div = document.createElement('div');
-        div.className = "bg-white flex flex-col w-1/4 h-64 rounded shadow-lg overflow-hidden cursor-pointer";
-        div.onclick = function() {
-            openModal(images[idx].title, images[idx].src.split('/').pop().split('.')[0]);
-        };
-        const img = document.createElement('img');
-        img.src = images[idx].src;
-        img.alt = images[idx].title;
-        img.className = "w-full h-full object-cover";
-        div.appendChild(img);
-        carousel.appendChild(div);
-    }
-}
-renderCarousel();
-document.getElementById('prevBtn').onclick = function() {
-    current = (current - 1 + images.length) % images.length;
-    renderCarousel();
-};
-document.getElementById('nextBtn').onclick = function() {
-    current = (current + 1) % images.length;
-    renderCarousel();
-};
+    // --- Header Scroll Effect ---
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-                
-// funcions modal
-function openModal(title, imageSrc) {
+    // --- Reveal Elements on Scroll ---
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: stop observing once revealed
+                // observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // --- Modal Handling ---
     const modal = document.getElementById('modal');
     const beforeImg = document.getElementById('beforeImg');
     const afterImg = document.getElementById('afterImg');
-    beforeImg.src =  `assets/img/${imageSrc}.png`;
-    afterImg.src = `assets/img/${imageSrc}_1.png`;
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
     const modalTitle = document.getElementById('modalTitle');
-    modalTitle.textContent = title;
-    modal.style.zIndex = 50;
-}
 
-function closeModal() {
-    const modal = document.getElementById('modal');
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
-    modal.style.zIndex = 0;
-}
+    window.openModal = function (title, baseImageName) {
+        // According to the file structure: 
+        // Before image is usually "galeriaX.png"
+        // After image is "galeriaX_1.png"
+        beforeImg.src = `./assets/img/${baseImageName}.png`;
+        afterImg.src = `./assets/img/${baseImageName}_1.png`;
+
+        modalTitle.textContent = title;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+    };
+
+    window.closeModal = function () {
+        modal.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    // Close modal on click outside content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+});
