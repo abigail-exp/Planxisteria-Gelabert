@@ -521,10 +521,12 @@ header.scrolled {
   z-index: 2000;
   background: rgba(0, 0, 0, 0.95);
   display: none;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
   backdrop-filter: blur(20px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 #modal.show {
@@ -551,12 +553,28 @@ header.scrolled {
 }
 
 .modal-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
+  z-index: 2100;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
+}
+
+.modal-close:hover {
+  background: var(--color-primary);
+  transform: rotate(90deg);
 }
 
 .comparison-container {
