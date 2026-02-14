@@ -287,15 +287,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Set images
         beforeImg.src = `./assets/img/${baseImageName}.png`;
         afterImg.src = `./assets/img/${baseImageName}_1.png`;
-        
+
         // Set text
         modalTitle.textContent = title;
         modalDescription.textContent = description;
-        
+
         // Show modal
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
-        
+
         // Reset slider to center
         if (comparisonOverlay && sliderHandle) {
             comparisonOverlay.style.width = '50%';
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-            
+
             comparisonOverlay.style.width = percentage + '%';
             sliderHandle.style.left = percentage + '%';
         }
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // PARALLAX EFFECT ON HERO SECTION
     // =====================================
     const heroImg = document.querySelector('.hero-img img');
-    
+
     if (heroImg) {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
@@ -388,6 +388,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================
     console.log('%c🚗 Planxisteria Gelabert', 'font-size: 24px; font-weight: bold; color: #007AFF;');
     console.log('%cMés de 60 anys d\'excel·lència en carrosseria', 'font-size: 14px; color: #A1A1A6;');
-    console.log('%c✨ Website Enhanced by AI', 'font-size: 12px; color: #34C759;');
-
 });
