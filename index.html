@@ -6,16 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Planxisteria Gelabert - Experts en reparació, restauració i renovació de vehicles a Igualada. Fundada el 1963, amb més de 60 anys d'experiència en carrosseria.">
+    <meta name="keywords"
+        content="planxisteria, carrosseria, Igualada, reparació vehicles, restauració cotxes, pintura cotxes, xapa i pintura">
+    <meta name="author" content="Planxisteria Gelabert">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://planxisteriagelabert.com/">
+    <meta property="og:title" content="Planxisteria Gelabert | Experts en Carrosseria">
+    <meta property="og:description"
+        content="Més de 60 anys d'experiència en reparació, restauració i renovació de vehicles a Igualada. Xapa i pintura de màxima qualitat.">
+    <meta property="og:image" content="./assets/img/logocar.png">
+    <meta property="og:locale" content="ca_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Planxisteria Gelabert | Experts en Carrosseria">
+    <meta name="twitter:description"
+        content="Més de 60 anys d'experiència en reparació, restauració i renovació de vehicles a Igualada.">
+    <meta name="twitter:image" content="./assets/img/logocar.png">
+
     <title>Planxisteria Gelabert | Experts en Carrosseria</title>
+    <link rel="canonical" href="https://planxisteriagelabert.com/">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="./assets/img/logocar.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Planxisteria Gelabert",
+        "image": "./assets/img/logocar.png",
+        "description": "Planxisteria i carrosseria amb més de 60 anys d'experiència en reparació, restauració i renovació de vehicles.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Carrer de Gaspar Camps, 31",
+            "addressLocality": "Igualada",
+            "addressRegion": "Barcelona",
+            "postalCode": "08700",
+            "addressCountry": "ES"
+        },
+        "telephone": "+34938032198",
+        "email": "pgelabertsl@gmail.com",
+        "url": "https://planxisteriagelabert.com/",
+        "foundingDate": "1963",
+        "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Header -->
     <header id="main-header">
         <div class="container header-content">
             <a href="#" class="logo-text">Planxisteria Gelabert</a>
+
+            <nav class="main-nav">
+                <a href="#" class="nav-link active">Inici</a>
+                <a href="#values" class="nav-link">Valors</a>
+                <a href="#services" class="nav-link">Serveis</a>
+                <a href="#gallery" class="nav-link">Galeria</a>
+                <a href="#about" class="nav-link">Sobre Nosaltres</a>
+                <a href="#testimonials" class="nav-link">Testimonis</a>
+                <a href="#contact" class="nav-link">Contacte</a>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="nav-socials">
                 <a href="https://www.instagram.com/planxisgelabert/" target="_blank" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -42,10 +103,21 @@
                 </a>
             </div>
         </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="#" class="mobile-nav-link">Inici</a>
+                <a href="#values" class="mobile-nav-link">Valors</a>
+                <a href="#services" class="mobile-nav-link">Serveis</a>
+                <a href="#gallery" class="mobile-nav-link">Galeria</a>
+                <a href="#about" class="mobile-nav-link">Sobre Nosaltres</a>
+                <a href="#testimonials" class="mobile-nav-link">Testimonis</a>
+                <a href="#contact" class="mobile-nav-link">Contacte</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
@@ -64,7 +136,6 @@
             </div>
         </section>
 
-        <!-- Values Section -->
         <section class="section-padding bg-bg" id="values">
             <div class="container">
                 <span class="section-tag reveal">Valors</span>
@@ -99,7 +170,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section class="section-padding" id="services">
             <div class="container anim-stagger">
                 <span class="section-tag reveal text-center">Serveis</span>
@@ -153,70 +223,232 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <section class="section-padding" id="gallery">
+        <section class="section-padding bg-bg" id="gallery">
             <div class="container">
                 <div class="gallery-header">
                     <div>
                         <span class="section-tag reveal">Galeria</span>
                         <h2 class="section-title reveal">Projectes Destacats</h2>
+                        <p class="section-desc reveal">Descobreix el nostre treball: abans i després de cada projecte
+                        </p>
+                    </div>
+                    <!-- Category Filters -->
+                    <div class="gallery-filters reveal">
+                        <button class="filter-btn active" data-category="all">Tots</button>
+                        <button class="filter-btn" data-category="moto">Motos</button>
+                        <button class="filter-btn" data-category="car">Vehicles</button>
+                        <button class="filter-btn" data-category="classic">Clàssics</button>
                     </div>
                 </div>
 
                 <div class="gallery-grid">
-                    <div class="gallery-item reveal" onclick="openModal('Restauració Moto', 'galeria1')">
-                        <img src="./assets/img/galeria1.png" alt="Restauració Moto">
+                    <div class="gallery-item reveal" data-category="moto"
+                        onclick="openModal('Restauració Moto', 'galeria1', 'Transformació completa d\'una moto vintage amb reparació de xapa i pintura personalitzada.')">
+                        <img src="./assets/img/galeria1.png" alt="Restauració completa de moto vintage" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Restauració Moto</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Restauració Fiat', 'galeria2')">
-                        <img src="./assets/img/galeria2.png" alt="Restauració Fiat">
+                    <div class="gallery-item reveal" data-category="car"
+                        onclick="openModal('Restauració Fiat', 'galeria2', 'Recuperació total d\'un Fiat clàssic amb carrosseria i pintura original.')">
+                        <img src="./assets/img/galeria2.png" alt="Restauració Fiat clàssic" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Restauració Fiat</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Passió Kawasaki', 'galeria3')">
-                        <img src="./assets/img/galeria3.png" alt="Nou aspecte Kawasaki">
+                    <div class="gallery-item reveal" data-category="moto"
+                        onclick="openModal('Passió Kawasaki', 'galeria3', 'Renovació estètica completa d\'una Kawasaki amb pintura premium.')">
+                        <img src="./assets/img/galeria3.png" alt="Renovació Kawasaki" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Passió Kawasaki</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Restauració Clàssic', 'galeria4')">
-                        <img src="./assets/img/galeria4.png" alt="Restauració Clàssic">
+                    <div class="gallery-item reveal" data-category="classic"
+                        onclick="openModal('Restauració Clàssic', 'galeria4', 'Treball meticulós de restauració en un vehicle clàssic.')">
+                        <img src="./assets/img/galeria4.png" alt="Restauració vehicle clàssic" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Restauració Clàssic</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Detall de Motor', 'galeria5')">
-                        <img src="./assets/img/galeria5.png" alt="Detall de Motor">
+                    <div class="gallery-item reveal" data-category="car"
+                        onclick="openModal('Detall de Motor', 'galeria5', 'Treballs de precisió en detalls de motor i àrees complexes.')">
+                        <img src="./assets/img/galeria5.png" alt="Detall de motor i carrosseria" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Detall de Motor</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Pintura Premium', 'galeria6')">
-                        <img src="./assets/img/galeria6.png" alt="Pintura Premium">
+                    <div class="gallery-item reveal" data-category="car"
+                        onclick="openModal('Pintura Premium', 'galeria6', 'Aplicació de pintura premium amb acabat de qualitat superior.')">
+                        <img src="./assets/img/galeria6.png" alt="Pintura premium vehicle" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Pintura Premium</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Xapa i Acabats', 'galeria7')">
-                        <img src="./assets/img/galeria7.png" alt="Xapa i Acabats">
+                    <div class="gallery-item reveal" data-category="car"
+                        onclick="openModal('Xapa i Acabats', 'galeria7', 'Reparació de xapa i acabats amb resultats impecables.')">
+                        <img src="./assets/img/galeria7.png" alt="Reparació xapa i acabats" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Xapa i Acabats</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
-                    <div class="gallery-item reveal" onclick="openModal('Renovació Total', 'galeria8')">
-                        <img src="./assets/img/galeria8.png" alt="Renovació Total">
+                    <div class="gallery-item reveal" data-category="car"
+                        onclick="openModal('Renovació Total', 'galeria8', 'Projecte de renovació completa amb resultats espectaculars.')">
+                        <img src="./assets/img/galeria8.png" alt="Renovació total vehicle" loading="lazy">
                         <div class="gallery-overlay">
                             <h3>Renovació Total</h3>
+                            <p>Abans & Després</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <section class="section-padding" id="about">
+            <div class="container">
+                <span class="section-tag reveal text-center">La Nostra Història</span>
+                <h2 class="section-title reveal text-center">Més de 60 Anys d'Excel·lència</h2>
+                <p class="section-desc reveal text-center" style="margin: 0 auto 4rem;">Des de 1963, la família Gelabert
+                    ha estat sinònim de qualitat i confiança en el món de la carrosseria.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-year">1963</div>
+                        <div class="timeline-content">
+                            <h3>Els Inicis</h3>
+                            <p>Fundació de Planxisteria Gelabert a Igualada. Començem amb la vocació de ser els millors
+                                en reparació de xapa i pintura.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-year">1980</div>
+                        <div class="timeline-content">
+                            <h3>Expansió i Modernització</h3>
+                            <p>Incorporació de les primeres tecnologies avançades de pintura i equipament especialitzat.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-year">2000</div>
+                        <div class="timeline-content">
+                            <h3>Nova Generació</h3>
+                            <p>Segona generació familiar al capdavant, mantenint els valors tradicionals i incorporant
+                                innovació.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h3>Líders en Restauració</h3>
+                            <p>Referents en restauració de vehicles clàssics i motos vintage, amb clients de tota
+                                Catalunya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="testimonials">
+            <div class="container">
+                <span class="section-tag reveal text-center">Testimonis</span>
+                <h2 class="section-title reveal text-center">Què Diuen els Nostres Clients</h2>
+                <p class="section-desc reveal text-center" style="margin: 0 auto 4rem;">La satisfacció dels nostres
+                    clients és la nostra millor carta de presentació.</p>
+
+                <div class="testimonials-carousel">
+                    <button class="carousel-btn prev" id="prevTestimonial" aria-label="Anterior testimoni">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="testimonial-text">"Siempre contenta, muy amable su atención. Voy desde 2005."</p>
+                            <div class="testimonial-author">
+                                <strong>Mary Holanda Mac</strong>
+                                <span>Client des de 2005</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="testimonial-text">"Hacen unas restauraciones estupendas, lo recomiendo"</p>
+                            <div class="testimonial-author">
+                                <strong>Tan Mala Cars</strong>
+                                <span>Restauracions</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="testimonial-text">"Buena gente y buenos profesionales."</p>
+                            <div class="testimonial-author">
+                                <strong>Andres Garcia</strong>
+                                <span>Serveis Generals</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="testimonial-text">"Planxisteria de toda la vida"</p>
+                            <div class="testimonial-author">
+                                <strong>Nuria Gonzalez Raso</strong>
+                                <span>Client Fidel</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="testimonial-text">"Rápido y con calidad"</p>
+                            <div class="testimonial-author">
+                                <strong>Jaume Llop</strong>
+                                <span>Reparacions Ràpides</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="testimonial-text">"Lo hacen bien y a un precio justo."</p>
+                            <div class="testimonial-author">
+                                <strong>Jose Boan</strong>
+                                <span>Preu Just i Qualitat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next" id="nextTestimonial" aria-label="Següent testimoni">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="carousel-dots" id="testimonialDots"></div>
+            </div>
+        </section>
+
         <section class="section-padding" id="contact">
             <div class="container">
                 <div class="contact-grid reveal">
@@ -258,21 +490,57 @@
         </div>
     </footer>
 
-    <!-- BEFORE/AFTER MODAL -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/34938032198?text=Hola!%20M'agradaria%20obtenir%20més%20informació%20sobre%20els%20vostres%20serveis."
+        class="whatsapp-btn" target="_blank" aria-label="Contacta per WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Tornar a dalt">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- ENHANCED BEFORE/AFTER MODAL -->
     <div id="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle" class="section-title text-center" style="margin-bottom: 2rem;">Projecte</h2>
-            <div class="comparison-container">
-                <div class="comparison-box">
-                    <img id="beforeImg" src="" alt="Abans">
-                    <span>Abans</span>
-                </div>
-                <div class="comparison-box">
-                    <img id="afterImg" src="" alt="Després">
-                    <span>Després</span>
+            <h2 id="modalTitle" class="section-title text-center" style="margin-bottom: 1rem;">Projecte</h2>
+            <p id="modalDescription" class="text-center" style="color: var(--color-text-dim); margin-bottom: 3rem;"></p>
+
+            <!-- Before/After Slider Comparison -->
+            <div class="comparison-slider">
+                <div class="comparison-image-wrapper">
+                    <img id="beforeImg" src="" alt="Abans" class="comparison-img">
+                    <div class="comparison-overlay">
+                        <img id="afterImg" src="" alt="Després" class="comparison-img">
+                    </div>
+                    <div class="comparison-slider-handle" id="sliderHandle">
+                        <div class="handle-line"></div>
+                        <div class="handle-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 6 9 12 15 18"></polyline>
+                                <polyline points="19 6 13 12 19 18"></polyline>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                                <polyline points="5 18 11 12 5 6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="handle-line"></div>
+                    </div>
+                    <div class="comparison-label before-label">ABANS</div>
+                    <div class="comparison-label after-label">DESPRÉS</div>
                 </div>
             </div>
+
             <div class="text-center" style="margin-top: 3rem;">
                 <button class="btn btn-primary" onclick="closeModal()">Tancar</button>
             </div>
